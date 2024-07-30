@@ -7,7 +7,9 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         freshness: 
-          warn_after: {90}
+          warn_after:
+            count: 90
+            period: day
         loaded_at_field: "CAST(date_date as TIMESTAMP)"
       - name: ship
         identifier: raw_gz_ship
